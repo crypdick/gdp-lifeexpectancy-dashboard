@@ -41,6 +41,14 @@ app.layout = html.Div([
                 hovermode='closest'
             )
         }
+    ),
+
+    html.Label('Slider'),
+    dcc.Slider(
+        min=0,
+        max=9,
+        marks={i: 'Label {}'.format(i) if i == 1 else str(i) for i in range(1, 6)},
+        value=5,
     )
 ])
 
