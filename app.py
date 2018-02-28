@@ -24,7 +24,7 @@ app.layout = html.Div([
         id='year-slider',
         min=df['year'].min(),
         max=df['year'].max(),
-        value=df['year'].min(),
+        value=df['year'].min(),  # The default value of the slider.
         step=None,
         marks={str(year): str(year) for year in df['year'].unique()}
     )
